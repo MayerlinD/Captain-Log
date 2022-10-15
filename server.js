@@ -23,6 +23,19 @@ app.get('/logs/new', (req,res) => {
     res.render('logs/New')
 })
 
+//CREATE
+app.post('/logs', (req, res) => {
+    req.body.shipIsBroken === 'on' ? req.body.shipIsBroken = true : req.body.shipIsBroken = false
+    Log.create(req.body, (err, createdLog) => {
+        if(err){
+            console.error(err)
+            res.status(400).send(err)
+        } else {
+            res.redirect(`/logs/${createdLog._id}`)
+        }
+    })
+})
+
 
 // Tell the app to listen on a port
 app.listen(3000, () => {
