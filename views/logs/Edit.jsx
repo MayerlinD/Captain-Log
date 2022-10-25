@@ -13,7 +13,7 @@ class Edit extends React.Component {
                     Title: <input type="text" name="title" defaultValue={title}></input><br/>
                     Entry: <input type="text" name="entry" defaultValue={entry}></input><br />
                     Ship Is Broken: <input type="checkbox" name="shipIsBroken" defaultChecked={shipIsBroken}/> <br />
-                    <input type="submit" value="Edit Fruit" />
+                    <input type="submit" value="Edit Log" />
                 </form>
             </>
         )

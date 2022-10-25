@@ -6,7 +6,7 @@ class New extends React.Component {
             <>
             <h1>Create A New Log</h1>
             <nav>
-                <a href="/logs">Go Back To Vegetables Home Page</a>
+                <a href="/logs">Go Back To Logs Home Page</a>
             </nav>
             <br></br>
             <form method="POST" action="/logs">
